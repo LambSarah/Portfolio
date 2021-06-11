@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -46,10 +47,10 @@ const Navbar = () => {
 					open={Boolean(anchorEl)}
 					onClose={handleMenuClose}
 				>
-					<MenuItem onClick={handleMenuClose}>Home</MenuItem>
-					<MenuItem onClick={handleMenuClose}>About</MenuItem>
-					<MenuItem onClick={handleMenuClose}>Contacts</MenuItem>
-					<MenuItem onClick={handleMenuClose}>Projects</MenuItem>
+					<Link to='/home'><MenuItem onClick={handleMenuClose}>Home</MenuItem></Link>
+					<Link to='/about'><MenuItem onClick={handleMenuClose}>About</MenuItem></Link>
+					<Link to='/contacts'><MenuItem onClick={handleMenuClose}>Contacts</MenuItem></Link>
+					<Link to='/projects'><MenuItem onClick={handleMenuClose}>Projects</MenuItem></Link>
 				</Menu>
 				<Typography variant='h1' className={classes.title}>
 					<Header />
